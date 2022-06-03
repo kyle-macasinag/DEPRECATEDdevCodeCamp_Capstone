@@ -13,7 +13,7 @@ import {
 } from "@reach/combobox";
 import "@reach/combobox/styles.css";
 
-export default function Places() {
+export default function Gyms() {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "AIzaSyAYovgZ5lEWHFrnuWqM4fBvBD0QEZhH_Pw",
     libraries: ["places"],
