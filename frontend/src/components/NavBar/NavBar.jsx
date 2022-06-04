@@ -4,6 +4,7 @@ import { useNavigate, Link } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
 import "./NavBar.css";
 import SearchBar from "../SearchBar/SearchBar";
+import Combobox from "../ComboBox/ComboBox";
 
 const Navbar = () => {
   const { logoutUser, user } = useContext(AuthContext);
@@ -16,6 +17,9 @@ const Navbar = () => {
             <b>Travelling Jiujitero</b>
           </Link>
         </li>
+        <div>
+          <Combobox/>
+        </div>
         <li>
           {user ? (
             <button onClick={logoutUser}>Logout</button>
