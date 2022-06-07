@@ -16,11 +16,11 @@ const Navbar = () => {
     <AppBar position="static">
     <Toolbar className={classes.Toolbar}>
     <Typography variant="h5" className={classes.title}>
-    Traveling Jiujiteiro
+    The Travelling Athlete
     </Typography>
     <Box dixplay="flex">
       <Typography variant="h6" className={classes.title}>
-        Find a gym!
+        Find a place to train!
       </Typography>
       {/* <Autocomplete> */}
         <div className={classes.search}>

@@ -1,4 +1,5 @@
 // General Imports
+import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import {CssBaseline, Grid} from "@material-ui/core";
@@ -14,8 +15,21 @@ import GymList from "./components/GymList/GymList";
 import Map from "./components/Map/Map";
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
+import { getPlacesData } from "./api";
+
 
 function App() {
+
+  const [places, setPlaces] = useState([]);
+
+  useEffect(() => {
+    getPlacesData()
+    .then((data) => {
+        console.log(data);
+        setPlaces(data);
+    })
+  }, []);
+
   return (
     <div>
       <Navbar />
