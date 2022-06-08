@@ -1,20 +1,36 @@
-import React, { useState } from "react";
-import {CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, Select } from "@material-ui/core"
-import GymDetails from "../GymDetails/GymDetails";
+import React from "react";
+// import useVideoPush from "../../hooks/useVideoPush";
 
- const GymList = () => {
-    const [gym, setGym] = useState("")//Jiu Jitsu Gyms
-    const [rating, setRating] = useState(""); //Probably leave blank
+const GymList = ({ gyms }) => {
 
-    <div return className={container} >
-        <Typography classname variant="h4">Gyms in the area</Typography>
-        <Form>
-            <Form.Text className="">
-                Search for a Gym!
-            </Form.Text>
-        </Form>
-    </div>
-}
+  return (
+    <>
+      {gyms ? (
+        gyms.map((gym) => {
+          if (gym.snippet) {
+            return (
+              <div className={`gym`} key={gym.id.gymId}>
+                <img
+                  key={gym.id.gymId}
+                  src={gym.snippet.thumbnails.medium.url}
+                  alt={gym.snippet.title}
+                //   onClick={() => handleVideoPush(video)}
+                />
+                <p>{gym.snippet.title}</p>
+              </div>
+            );
+          } else {
+            return null;
+          }
+        })
+      ) : (
+        <div>Loading...</div>
+      )}
+    </>
+  );
+};
+
+export default GymList;
 
 
 
@@ -61,5 +77,4 @@ import GymDetails from "../GymDetails/GymDetails";
 //         </div>
 //     );
 // }
-
-export default GymList;
+// 

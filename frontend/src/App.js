@@ -34,7 +34,7 @@ function App() {
     getPlacesData()
     .then((data) => {
         console.log(data);
-        setPlaces(data);
+        // setPlaces(data);
     })
   }, []);
 
@@ -45,17 +45,17 @@ function App() {
         <Grid item xs={12} md={4}>
           {/* <GymList/> */}
         </Grid>
-      <Grid item xs={12} md={8}>
+      <Grid item xs={12} md={12}>
         <Map
-          setCoordinates={setCoordinates}
-          setBounds={setBounds}
-          coordinates={coordinates}
+          // setCoordinates={setCoordinates}
+          // setBounds={setBounds}
+          // coordinates={coordinates}
         />
       </Grid>
 
       </Grid>
       <Routes>
-        <Route path="/" element={<HomePage findGyms={findGyms}/>}
+        <Route path="/" element={<HomePage/>}
         />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />

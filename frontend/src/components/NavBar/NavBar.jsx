@@ -26,7 +26,7 @@ const Navbar = () => {
         </li>
         <li className="brand">
           <Link to="/" style={{ textDecoration: "none"}}>
-            <h1><span style={{color:"red"}}>Travelling</span>
+            <h1><span style={{color:"black"}}>Travelling</span>
             <span style={{color:"white"}}>Athlete</span></h1>
           </Link>
         </li>
