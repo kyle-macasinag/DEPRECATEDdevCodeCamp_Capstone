@@ -30,12 +30,12 @@ export default function MapDisplay() {
       mapContainerClassName="map-container"
       margin = {[50,50,50,50]}
       options = {""}
-      onChange = {(event) => {
-          console.log(event);
+    //   onChange = {(event) => {
+    //       console.log(event);
 
-          setCoordinates({ lat: event.center.lat, lng: event.center.lng});
-      }}
-      onChildClick ={""}
+    //       setCoordinates({ lat: event.center.lat, lng: event.center.lng});
+    //   }}
+    //   onChildClick ={""}
       >
         
       </GoogleMap>

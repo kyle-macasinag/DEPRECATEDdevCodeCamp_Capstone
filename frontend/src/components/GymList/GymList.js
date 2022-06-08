@@ -14,7 +14,10 @@ const GymList = () => {
      const gyms = [
          {name: "cool place"},
          {name: "Best Place"},
-         {name: "Competetive Gym"},
+         {name: "Competetive Gym"},//THIS IS A TENATIVE LIST.  IT IS NOT FINAL
+         {name: "hot place"},
+         {name: "Lame Place"},
+         {name: "Fun Gym"},
      ]
 
     return (
@@ -23,7 +26,7 @@ const GymList = () => {
             <FormControl className={classes.formControl}>
                 <InputLabel>Type</InputLabel>
                 <Select value={type} onChange={(e) => setType(e.target.value)}>
-                    <MenuItem value="jiu jitsu gyms">Gyms</MenuItem>
+                    <MenuItem value="jiu jitsu gyms">Jiu-Jitsu</MenuItem>
                 </Select>
             </FormControl>
             <FormControl className={classes.formControl}>

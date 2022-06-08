@@ -20,18 +20,24 @@ import { getPlacesData } from "./api";
 
 function App() {
 
-  const [places, setPlaces] = useState([]);
+  const [places, setPlaces] = useState([]);//gyms, setGyms???
 
-  const [coordinates, setCoordinates] = useState([]);
+  const [coordinates, setCoords] = useState({});
   const [bounds, setBounds] = useState(null);
 
   useEffect(() => {
+    navigator.geolocation.getCurrentPosition(({ coords: { latitude, longitude } }) => {
+      setCoords({ lat: latitude, lng: longitude });//WHY DOES COORDS WORK WHEN COORDINATES DOESN'T
+    });
+  }, []);
+  useEffect(() => {
+    console.log(coordinates, bounds);
     getPlacesData()
     .then((data) => {
         console.log(data);
         setPlaces(data);
     })
-  }, []);
+  }, [coordinates, bounds]);
 
   return (
     <div>
@@ -40,9 +46,9 @@ function App() {
         <Grid item xs={12} md={4}>
           <GymList/>
         </Grid>
-      <Grid item xs={12} md={8}>
+      <Grid item xs={12} md={8} style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
         <Map
-          setCoordinates={setCoordinates}
+          setCoordinates={setCoords}
           setBounds={setBounds}
           coordinates={coordinates}
         />
