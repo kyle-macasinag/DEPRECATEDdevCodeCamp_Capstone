@@ -26,9 +26,10 @@ def get_reviews(request, video_id):
 # POST new comment (protected)
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
-def create_review(request):
-    serializer = ReviewSerializer(data=request.data)
+def add_review(request):
+    serializer = ReviewSerializer(data = request.data)
     if serializer.is_valid():
         serializer.save(user=request.user)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    else:
+        return Response(serializer.error, status=status.HTTP_400_BAD_REQUEST)

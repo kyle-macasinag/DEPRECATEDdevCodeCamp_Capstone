@@ -5,5 +5,5 @@ from reviews import views
 
 urlpatterns = [
     path('', views.create_review),
-    path('<str:gym_id>', views.get_reviews),
+    path('<gym_id>', views.get_reviews),
 ]
