@@ -5,9 +5,6 @@ import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import Rating from '@material-ui/lab/Rating';
 import GoogleMapReact from "google-map-react";
 
-import useStyles from "./styles"
-
-
 
 
 export default function MapDisplay() {

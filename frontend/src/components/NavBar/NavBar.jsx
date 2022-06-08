@@ -1,7 +1,9 @@
+import { ClassNames } from "@emotion/react";
 import React from "react";
 import { useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import AuthContext from "../../context/AuthContext";
+import {AppBar, Toolbar, Typography, InputBase, Box} from '@material-ui/core';
 import "./NavBar.css";
 
 const Navbar = () => {
@@ -9,6 +11,11 @@ const Navbar = () => {
   const navigate = useNavigate();
   return (
     <div className="navBar">
+      <box dixplay="flex">
+        <Typography variant="h6">
+          <h2>Find a place to Train!</h2>
+        </Typography>
+      </box>
       <ul>
         <li>
           {user ? (
