@@ -6,14 +6,11 @@ import axios from "axios";
 
 const URL = 'https://google-location-data.p.rapidapi.com/search'
 
-
-// params: {query: `Jiu Jitsu Gyms Brandon, Fl`,
-// isNumber: 'false',
-//  lang: 'en'},
-
 const options = {
 
-
+  params: {query: `Jiu Jitsu Gyms in Brandon, Fl`,
+   isNumber: 'false',
+    lang: 'en'},
     bl_latitude: "11",
     tr_latitude: "12",
     bl_longitude: "109",
@@ -27,11 +24,11 @@ const options = {
 
 
 
-export const getPlacesData = async (sw, ne) => {
+export const getPlacesData = async () => {
 
 
     try {
-        const {data: data} = await axios.get(URL, options);
+        const {data} = await axios.get(URL, options);
 
         return data;
     } catch (error) {
