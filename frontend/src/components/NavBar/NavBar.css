@@ -1,4 +1,4 @@
-ul {
+uul {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
@@ -9,22 +9,23 @@ li {
 }
 
 .navBar {
-  background: rgb(57, 168, 29);
+  background: slateblue;
   box-shadow: 4px 2px 5px gray;
   color: white;
+  margin-bottom: 2rem;
   padding: 1.5rem 2rem;
 }
 
 .navBar button {
   background: transparent;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid white;
   color: white;
   padding: 0.4rem 0.5rem;
 }
 
 .navBar button:hover {
-  background: rgb(255, 0, 0);
-  color: rgb(0, 0, 0);
+  background: white;
+  color: slateblue;
   cursor: pointer;
 }
 
