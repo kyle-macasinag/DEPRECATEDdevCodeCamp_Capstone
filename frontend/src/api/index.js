@@ -16,7 +16,7 @@ const options = {
     bl_longitude: "109",
     tr_longitude: "109",
   headers: {
-    'rapidapi-auth': 'AIzaSyB9HYwoUmm9j7YDJ5ZQMlqzi4sgCbFVAQw',//NEEDS TO BECOME AN ENV VARIABLE
+    'rapidapi-auth': 'AIzaSyAIrHeTPljOYzhcZBiT3OfCgb80KdrbVGc',//NEEDS TO BECOME AN ENV VARIABLE
     'X-RapidAPI-Host': 'google-location-data.p.rapidapi.com',
     'X-RapidAPI-Key': '81093bc095mshb81ae5f8135eab3p102351jsna25df92c319c'//THIS ONE TOO MAYBE??
   }
