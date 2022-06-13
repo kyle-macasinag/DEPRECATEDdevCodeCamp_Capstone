@@ -25,6 +25,7 @@ function App() {
 
   const [coordinates, setCoordinates] = useState([]);
   const [bounds, setBounds] = useState(null);
+  
 
   useEffect(() => {
     getPlacesData()

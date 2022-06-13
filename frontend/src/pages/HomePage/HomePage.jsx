@@ -7,7 +7,7 @@ import { GoogleMap, useLoadScript } from '@react-google-maps/api';
 import GymList from '../../components/GymList/GymList';
 import {CssBaseline, Grid} from "@material-ui/core";
 import useStyles from "./styles"
-
+import axios from 'axios';
 
 
 
@@ -20,6 +20,8 @@ export default function HomePage() {
     return <Map />;
   }
   
+
+  
   const Map = (setCoordinates, setBounds, coordinates) => {
     const center = useMemo(() => ({ lat: 27.88074, lng: -82.32977 }), []);
   
@@ -27,7 +29,7 @@ export default function HomePage() {
         
         <Grid container spacing={3} style={{ width: "100%"}}>
         <Grid item xs={12} md={4}>
-          <GymList/>
+          <GymList />
         </Grid>
       <Grid item xs={12} md={8}>
       <GoogleMap 

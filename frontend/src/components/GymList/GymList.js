@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {CircularProgress, Grid, Typography, InputLabel, MenuItem, FormControl, Select } from "@material-ui/core"
 import useStyles from "./GymListStyles"
 import GymDetails from "../GymDetails/GymDetails";
-
+// import { getPlacesData } from "../../api";
 
 const GymList = () => {
     const classes = useStyles();
@@ -23,7 +23,7 @@ const GymList = () => {
             <FormControl className={classes.formControl}>
                 <InputLabel>Type</InputLabel>
                 <Select value={type} onChange={(e) => setType(e.target.value)}>
-                    <MenuItem value="jiu jitsu gyms">Gyms</MenuItem>
+                    <MenuItem value="jiu jitsu gyms">Jiu Jitsu</MenuItem>
                 </Select>
             </FormControl>
             <FormControl className={classes.formControl}>
