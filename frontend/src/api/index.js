@@ -9,14 +9,13 @@ const URL = 'https://google-location-data.p.rapidapi.com/search'
 
 
 
-
-export const getPlacesData = async () => {
+export const getGymsData = async () => {
 
 
     try {
         const {data} = await axios.get(URL, {
 
-          params: {query: `Jiu Jitsu Gyms in Denver, CO`,//Query will be interpolated
+          params: {query: `Jiu Jitsu Gyms in Brandon, FL`,//Query will be interpolated
            isNumber: 'false',
             lang: 'en'},
             // bl_latitude: "11",

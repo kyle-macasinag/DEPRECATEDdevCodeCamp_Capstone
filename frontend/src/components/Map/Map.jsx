@@ -27,7 +27,7 @@ export default function MapDisplay() {
       zoom={10} 
       defaultCenter={center}
       center={center} 
-      mapContainerClassName="map-container"
+      mapContainerclassName="map-container"
       margin = {[50,50,50,50]}
       options = {""}
       onChange = {(event) => {

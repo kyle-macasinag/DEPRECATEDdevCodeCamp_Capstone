@@ -16,38 +16,38 @@ import GymList from "./components/GymList/GymList";
 import Map from "./components/Map/Map";
 // Util Imports
 import PrivateRoute from "./utils/PrivateRoute";
-import { getPlacesData } from "./api";
+// import { getGymsData } from "./api";
 
 
 function App() {
 
-  const [places, setPlaces] = useState([]);
+  // const [gyms, setGyms] = useState([]);
 
-  const [coordinates, setCoordinates] = useState([]);
-  const [bounds, setBounds] = useState(null);
-  
+  // const [coordinates, setCoordinates] = useState([]);
+  // const [bounds, setBounds] = useState(null);
 
-  useEffect(() => {
-    getPlacesData()
-    .then((data) => {
-        console.log(data);
-        setPlaces(data);
-    })
-  }, []);
+  // useEffect(() => {
+  //   getGymsData()
+  //   .then((data) => {
+  //       console.log(data);
+  //       setGyms(data);
+  //   })
+  // }, []);
+
 
   return (
     <div>
       <Navbar />
 
       <Routes>
-        {/* <Route
+        <Route
           path="/"
           element={
             <PrivateRoute>
-              <Homepage />
+              {/* <Homepage /> */}
            </PrivateRoute>
           }
-        /> */}
+        />
         <Route path="/home" element={<HomePage/>} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
