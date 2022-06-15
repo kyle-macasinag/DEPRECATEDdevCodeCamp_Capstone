@@ -3,6 +3,7 @@ import { GoogleMap, useLoadScript } from '@react-google-maps/api';
 import { Paper, Typography, useMediaQuery } from '@material-ui/core';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import Rating from '@material-ui/lab/Rating';
+import { ClassNames } from '@emotion/react';
 // import GoogleMapReact from "google-map-react";
 
 // import useStyles from "./styles"
@@ -19,7 +20,7 @@ export default function MapDisplay() {
     return <Map />;
   }
   
-  const Map = (setCoordinates, setBounds, coordinates) => {
+  const Map = (setCoordinates, setBounds, coordinates, gyms) => {
     const center = useMemo(() => ({ lat: 27.88074, lng: -82.32977 }), []);
   
     return (
@@ -37,7 +38,16 @@ export default function MapDisplay() {
       }}
       onChildClick ={""}
       >
-        
+        {/* {gyms?.map((gym) => (
+          <div
+            className={classes.markerContainer}
+            lat={Number(gym.latitude)}
+            lng={Number(gym.longitude)}
+            key={i}
+          >
+
+          </div> */}
+        ))}
       </GoogleMap>
     );
     

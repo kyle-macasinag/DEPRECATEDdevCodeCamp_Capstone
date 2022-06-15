@@ -32,7 +32,10 @@ const GymDetails = ({ gym }) => {
                                 {/* BELOW SHOULD BE A BUTTON LEADING TO THE GOOGLE REVIEWS */}
             <CardActions>
                 <Button size="small" color="primary" onClick={() => window.open(gym.web_url, "_blank")}>
-                Reviews
+                See Reviews
+                </Button>
+                <Button size="small" color="primary">
+                Add to Favorites
                 </Button>
             </CardActions>
             </CardContent>

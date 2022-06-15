@@ -10,13 +10,13 @@ const Navbar = () => {
   return (
     <div className="navBar">
       <ul>
-        <li>
+        {/* <li>
           {user ? (
           <button onClick={() => navigate("/favorites")}>Favorites</button>
           ): (
             <p></p>
           )}
-        </li>
+        </li> */}
         <li className="brand">
           <Link to="/" style={{ textDecoration: "none"}}>
             <h1><span style={{color:"gray"}}>Travelling</span>

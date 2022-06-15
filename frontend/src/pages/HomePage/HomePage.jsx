@@ -38,7 +38,9 @@ const Map = (props) => {
     <Grid container spacing={3} style={{ width: "100%" }}>
       <Grid item xs={12} md={4}>
         {console.log("Gyms before GymList call: ", gyms)}
-        <GymList gyms={gyms}/>
+        <GymList 
+        gyms={gyms}
+        />
       </Grid>
       <Grid item xs={12} md={8}>
       <GoogleMap 
@@ -54,6 +56,7 @@ const Map = (props) => {
       setCoordinates({ lat: event.center.lat, lng: event.center.lng});
   }}
   onChildClick ={""}
+//   gyms={gyms} THIS IS INVILVED IN THE PINS
   >
     
   </GoogleMap>
