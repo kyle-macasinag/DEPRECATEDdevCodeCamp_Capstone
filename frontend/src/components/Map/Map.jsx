@@ -3,9 +3,9 @@ import { GoogleMap, useLoadScript } from '@react-google-maps/api';
 import { Paper, Typography, useMediaQuery } from '@material-ui/core';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import Rating from '@material-ui/lab/Rating';
-import GoogleMapReact from "google-map-react";
+// import GoogleMapReact from "google-map-react";
 
-import useStyles from "./styles"
+// import useStyles from "./styles"
 
 
 

@@ -41,20 +41,22 @@ const Map = (props) => {
         <GymList gyms={gyms}/>
       </Grid>
       <Grid item xs={12} md={8}>
-        <GoogleMap
-          zoom={10}
-          defaultCenter={center}
-          center={center}
-          mapContainerclassName="map-container"
-          margin={[50, 50, 50, 50]}
-          options={""}
-          onChange={(event) => {
-            console.log(event);
+      <GoogleMap 
+  zoom={10} 
+  defaultCenter={center}
+  center={center} 
+  mapContainerClassName="map-container"
+  margin = {[50,50,50,50]}
+  options = {""}
+  onChange = {(event) => {
+      console.log(event);
 
-            setCoordinates({ lat: event.center.lat, lng: event.center.lng });
-          }}
-          onChildClick={""}
-        ></GoogleMap>
+      setCoordinates({ lat: event.center.lat, lng: event.center.lng});
+  }}
+  onChildClick ={""}
+  >
+    
+  </GoogleMap>
       </Grid>
     </Grid>
   );
