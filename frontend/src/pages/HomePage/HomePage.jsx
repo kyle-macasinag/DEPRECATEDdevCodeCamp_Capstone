@@ -56,7 +56,7 @@ const Map = (props) => {
       setCoordinates({ lat: event.center.lat, lng: event.center.lng});
   }}
   onChildClick ={""}
-//   gyms={gyms} THIS IS INVILVED IN THE PINS
+//   gyms={gyms} THIS IS INVOLVED IN THE PINS
   >
     
   </GoogleMap>

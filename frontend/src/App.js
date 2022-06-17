@@ -8,6 +8,7 @@ import {CssBaseline, Grid} from "@material-ui/core";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import HomePage from "./pages/HomePage/HomePage";
+import FavoritesPage from "./pages/FavoritesPage/FavoritesPage";
 
 // Component Imports
 import Navbar from "./components/NavBar/NavBar";
@@ -48,7 +49,14 @@ function App() {
            </PrivateRoute>
           }
         />
-        {/* <Route path="/home" element={<HomePage/>} /> */}
+        <Route
+        path="/favorites"
+        element={
+          <PrivateRoute>
+            <FavoritesPage/>
+          </PrivateRoute>
+        }/>
+
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
       </Routes>

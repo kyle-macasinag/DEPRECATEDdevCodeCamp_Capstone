@@ -5,6 +5,7 @@ import PhoneIcon from "@material-ui/icons/Phone";
 import Rating from "@material-ui/lab/Rating";
 import PlacesAutocomplete from "react-places-autocomplete";
 // import useStyles from ./styles;
+import FavoriteList from "../Favorite List/FavoriteList";
 
 const GymDetails = ({ gym }) => {
 
@@ -31,11 +32,11 @@ const GymDetails = ({ gym }) => {
                 </Box>
                                 {/* BELOW SHOULD BE A BUTTON LEADING TO THE GOOGLE REVIEWS */}
             <CardActions>
-                <Button size="small" color="primary" onClick={() => window.open(gym.web_url, "_blank")}>
+                <Button size="small" color="primary" onClick={() => window.open(`http://www.google.com/search?q=${gym.name}`)}>
                 See Reviews
                 </Button>
-                <Button size="small" color="primary">
-                Add to Favorites
+                <Button size="small" color="primary" onClick={() => FavoriteList.push(gym.name)}>
+                Add to Favorites 
                 </Button>
             </CardActions>
             </CardContent>
@@ -43,4 +44,5 @@ const GymDetails = ({ gym }) => {
         </Card>
     )
 }
+
 export default GymDetails;
