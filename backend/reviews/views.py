@@ -23,7 +23,7 @@ def get_reviews(request, video_id):
     return Response(serializer.data)
 
 
-# POST new comment (protected)
+# POST new review (protected)
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def create_review(request):
