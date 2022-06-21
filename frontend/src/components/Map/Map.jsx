@@ -1,9 +1,10 @@
 import {React, useMemo} from 'react';
-import { GoogleMap, useLoadScript } from '@react-google-maps/api';
+import { GoogleMap, useLoadScript, Marker } from '@react-google-maps/api';
 import { Paper, Typography, useMediaQuery } from '@material-ui/core';
 import LocationOnOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
 import Rating from '@material-ui/lab/Rating';
 import { ClassNames } from '@emotion/react';
+
 // import GoogleMapReact from "google-map-react";
 
 // import useStyles from "./styles"
@@ -38,6 +39,7 @@ export default function MapDisplay() {
       }}
       onChildClick ={""}
       >
+        {gyms && <Marker position={gyms} />}
         {/* {gyms?.map((gym) => (
           <div
             className={classes.markerContainer}
@@ -46,8 +48,8 @@ export default function MapDisplay() {
             key={i}
           >
 
-          </div> */}
-        ))}
+          </div>
+        ))} */}
       </GoogleMap>
     );
     

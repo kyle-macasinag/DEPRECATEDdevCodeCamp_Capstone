@@ -7,7 +7,8 @@ import { GoogleMap, useLoadScript } from "@react-google-maps/api";
 import GymList from "../../components/GymList/GymList";
 import { CssBaseline, Grid } from "@material-ui/core";
 // import useStyles from "./styles"
-import { getGymsData } from "../../api";
+import { getGymsData } from "../../components/SearchBar/SearchBar";
+// import SearchBar from "../../components/SearchBar/SearchBar";
 
 export default function HomePage() {
   const [gyms, setGyms] = useState([]);
