@@ -17,6 +17,8 @@ const center = {
 function MyMap({gyms}) {
   console.log("GYMDET:", gyms)
 
+ 
+
   
 
   const { isLoaded } = useJsApiLoader({
@@ -57,10 +59,10 @@ function MyMap({gyms}) {
         
         { /* Child components, such as markers, info windows, etc. */ }
         
-        {
-          newGyms = gyms.map(makeMarkers())
-          function makeMarkers(Marker position = [gym.location.lat, gym.location.long])
-        }
+        {/* {gyms.map((el) =>{
+          
+          <Marker position={{lat: el.location.lat, long: el.location.long}} />
+        })} */}
 
         {/* <Marker position={center}></Marker> */}
       </GoogleMap>
