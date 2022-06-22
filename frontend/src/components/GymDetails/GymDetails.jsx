@@ -8,6 +8,7 @@ import PlacesAutocomplete from "react-places-autocomplete";
 import FavoriteList from "../Favorite List/FavoriteList";
 
 const GymDetails = ({ gym }) => {
+    console.log("GYMDET2:", gym)
 
     // const classes = useStyles();
 
@@ -27,7 +28,7 @@ const GymDetails = ({ gym }) => {
                 </Box>
                 <Box display="flex" justifyContent="space-between">
                     <Typography variant="subtitle1">Rating::</Typography>
-                    <Typography gutterBottom variant="subtitle1">{gym.rating}</Typography>
+                    <Typography gutterBottom variant="subtitle1">{[gym.location.lat, gym.location.long]}</Typography>
                    
                 </Box>
                                 {/* BELOW SHOULD BE A BUTTON LEADING TO THE GOOGLE REVIEWS */}
