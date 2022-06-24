@@ -23,7 +23,7 @@ function MyMap({gyms}) {
 
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: "AIzaSyAYovgZ5lEWHFrnuWqM4fBvBD0QEZhH_Pw"
+    googleMapsApiKey: 'AIzaSyBjtdpPEs85GDN0NWGqwkuY-N-ocZid9jU'
   })
 
   const [map, setMap] = React.useState(null)
@@ -60,11 +60,11 @@ function MyMap({gyms}) {
         { /* Child components, such as markers, info windows, etc. */ }
         
         {/* {gyms.map((el) =>{
+         
+          return <Marker position={{lat: el.location.lat, long: el.location.long}} />
           
-          <Marker position={{lat: el.location.lat, long: el.location.long}} />
         })} */}
-
-        {/* <Marker position={center}></Marker> */}
+      
       </GoogleMap>
   ) : <></>
 }
