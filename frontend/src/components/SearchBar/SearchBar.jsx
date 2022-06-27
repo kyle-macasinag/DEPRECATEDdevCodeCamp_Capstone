@@ -3,11 +3,12 @@ import "./SearchBar.css";
 
 const SearchBar = ({ handleSearch }) => {
   const [search, setSearch] = useState("");
-
+  
   const handleSubmit = (event) => {
     event.preventDefault();
-    handleSearch(search);
+    // handleSearch(search);
     setSearch("");
+    console.log("SEARCH:", search)
   };
   return (
     <form className="searchBar" onSubmit={handleSubmit}>

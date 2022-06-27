@@ -51,9 +51,9 @@ const Navbar = () => {
             <span style={{color:"white"}}>Athlete</span></h1>
           </Link>
         </li>
-            {/* <div className="container">
-              <SearchBar handleSearch={fetchResults} />
-            </div> */}
+            <div className="container">
+              <SearchBar/>
+            </div>
         <li>
           {user ? (
             <button onClick={logoutUser}>Logout</button>

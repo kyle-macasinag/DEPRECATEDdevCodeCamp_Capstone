@@ -15,7 +15,7 @@ export const getGymsData = async () => {
     try {
         const {data} = await axios.get(URL, {
 
-          params: {query: `Jiu Jitsu Gyms in Brandon, FL`,//Query will be interpolated
+          params: {query: `Jiu Jitsu Gyms in ${""}`,//Query will be interpolated
            isNumber: 'false',
             lang: 'en'},
             // bl_latitude: "11",
