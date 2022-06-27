@@ -1,30 +1,29 @@
-from rest_framework import status
+from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.decorators import api_view, permission_classes
-from reviews.models import Review
-from reviews.serializers import ReviewSerializer
-from django.core.exceptions import ObjectDoesNotExist
 
+from user_reviews.serializers import ReviewSerializer
+from .models import Review
+from favorites.serializers import FavoriteSerializer
+from django.core.exceptions import ObjectDoesNotExist
+from rest_framework import status
 # Create your views here.
 
-# GET by video_id (unprotecte)
 
+#POST new review (Protected)
 
-@api_view(['GET'])
+@api_view(["GET"])
 @permission_classes([AllowAny])
-def get_reviews(request, video_id):
-    try:
-        reviews = Review.objects.filter(video_id=video_id)
-    except ObjectDoesNotExist:
-        return Response({"error": "No reviews exist with that gymId"})
+def get_reviews(request):
+    if request.method == "GET":
+        review = Review.objects.all()
+        serializer = ReviewSerializer(review, many=True)
 
-    serializer = ReviewSerializer(reviews, many=True)
-    return Response(serializer.data)
+        return Response(serializer.data)
 
 
-# POST new review (protected)
-@api_view(['POST'])
+@api_view(["POST"])
 @permission_classes([IsAuthenticated])
 def create_review(request):
     serializer = ReviewSerializer(data=request.data)

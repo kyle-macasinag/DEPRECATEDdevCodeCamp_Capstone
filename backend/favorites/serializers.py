@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Comment, Favorite
+from .models import Favorite
 from authentication.models import User
 
 class FavoriteSerializer(serializers.ModelSerializer):
